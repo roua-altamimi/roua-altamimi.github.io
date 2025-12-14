@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rou'a AL Tamimi | AI & Machine Learning Engineer</title>
+  <meta name="description" content="AI & Machine Learning Engineer with expertise in Python, TensorFlow, PyTorch, and production-ready AI solutions. Passionate about building intelligent systems that create real impact." />
+  <meta name="author" content="Rou'a AL Tamimi" />
+  <meta name="keywords" content="AI Engineer, Machine Learning, Python, TensorFlow, PyTorch, Data Science, RAG Systems, Computer Vision, NLP" />
+  
+  <meta property="og:title" content="Rou'a AL Tamimi | AI & Machine Learning Engineer" />
+  <meta property="og:description" content="AI & Machine Learning Engineer with expertise in Python, TensorFlow, PyTorch, and production-ready AI solutions." />
+  <meta property="og:type" content="website" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rou'a AL Tamimi | AI & Machine Learning Engineer" />
+  <meta name="twitter:description" content="AI & Machine Learning Engineer with expertise in Python, TensorFlow, PyTorch, and production-ready AI solutions." />
+  
+  <link rel="canonical" href="https://roaatamimi.github.io" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --background: hsl(0, 60%, 97%);
+      --foreground: hsl(0, 0%, 12%);
+      --card: hsl(0, 40%, 99%);
+      --card-foreground: hsl(0, 0%, 12%);
+      --primary: hsl(0, 84%, 67%);
+      --primary-foreground: hsl(0, 0%, 100%);
+      --secondary: hsl(350, 80%, 95%);
+      --secondary-foreground: hsl(0, 60%, 45%);
+      --muted: hsl(30, 25%, 94%);
+      --muted-foreground: hsl(0, 0%, 45%);
+      --accent: hsl(15, 90%, 65%);
+      --accent-foreground: hsl(0, 0%, 100%);
+      --border: hsl(30, 20%, 90%);
+      --radius: 1rem;
+      --gradient-primary: linear-gradient(135deg, hsl(0, 84%, 67%), hsl(350, 80%, 60%));
+      --gradient-hero: linear-gradient(180deg, hsl(0, 60%, 97%) 0%, hsl(0, 70%, 95%) 50%, hsl(0, 60%, 97%) 100%);
+      --gradient-glow: radial-gradient(circle, hsl(0, 84%, 67%, 0.2) 0%, transparent 70%);
+      --shadow-soft: 0 4px 20px -4px hsl(0, 84%, 67%, 0.15);
+      --shadow-card: 0 8px 30px -8px hsl(0, 0%, 0%, 0.08);
+      --shadow-glow: 0 0 60px hsl(0, 84%, 67%, 0.2);
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Space Grotesk', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Glass Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Section Title */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* Card Hover */
+    .card-hover {
+      transition: all 0.5s ease-out;
+    }
+
+    .card-hover:hover {
+      box-shadow: var(--shadow-card);
+      transform: translateY(-4px);
+    }
+
+    /* Button Primary */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      color: var(--primary-foreground);
+      background: var(--gradient-primary);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Skill Badge */
+    .skill-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: var(--secondary);
+      color: var(--secondary-foreground);
+      transition: all 0.3s;
+    }
+
+    .skill-badge:hover {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      transform: scale(1.05);
+    }
+
+    /* Social Icon */
+    .social-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary);
+      color: var(--secondary-foreground);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .social-icon:hover {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      transform: scale(1.1);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* Link Primary */
+    .link-primary {
+      color: var(--primary);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .link-primary:hover {
+      gap: 0.75rem;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      transition: all 0.3s;
+      padding: 1.25rem 0;
+    }
+
+    nav.scrolled {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-card);
+      padding: 0.75rem 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      color: var(--muted-foreground);
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 9999px;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--foreground);
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-radius: 0.75rem;
+      padding: 1rem;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 0;
+      color: var(--muted-foreground);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--gradient-hero);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: var(--gradient-glow);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 {
+        font-size: 5rem;
+      }
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      max-width: 42rem;
+      margin: 0 auto 2.5rem;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+
+    @media (min-width: 768px) {
+      .hero p {
+        font-size: 1.25rem;
+      }
+    }
+
+    .hero .btn-primary {
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    /* Neural Network */
+    .neural-network {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      margin: 0 auto 2rem;
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .neural-network svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 20px hsl(0, 84%, 67%, 0.3));
+    }
+
+    .floating-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: hsl(0, 84%, 67%, 0.4);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Sections */
+    section {
+      padding: 6rem 0;
+    }
+
+    .bg-muted {
+      background: hsl(30, 25%, 94%, 0.3);
+    }
+
+    /* About */
+    .about-card {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-card {
+        padding: 3rem;
+      }
+    }
+
+    .about-card p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      line-height: 1.8;
+    }
+
+    @media (min-width: 768px) {
+      .about-card p {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Achievements */
+    .achievements-grid {
+      max-width: 56rem;
+      margin: 0 auto;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .achievement-card {
+      padding: 2rem;
+      border-radius: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .achievement-icon {
+      font-size: 2.5rem;
+    }
+
+    .achievement-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 0.75rem;
+    }
+
+    .achievement-card p {
+      color: var(--muted-foreground);
+      line-height: 1.6;
+    }
+
+    /* Certificates */
+    .certificates-grid {
+      max-width: 56rem;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .certificate-card {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .certificate-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .certificate-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.75rem;
+      background: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .certificate-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--primary);
+    }
+
+    .certificate-card h3 {
+      font-weight: 600;
+      color: var(--foreground);
+    }
+
+    /* Skills */
+    .skills-grid {
+      max-width: 64rem;
+      margin: 0 auto;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .skill-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .skill-card h3 {
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* Projects */
+    .projects-content {
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact-content {
+      max-width: 42rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-content p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      margin-bottom: 2.5rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+      background: var(--background);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--muted-foreground);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes dataFlow {
+      0% {
+        stroke-dashoffset: 30;
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      100% {
+        stroke-dashoffset: -30;
+        opacity: 0;
+      }
+    }
+
+    @keyframes spinSlow {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes neuronPulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .animate-pulse {
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .animate-data-flow {
+      animation: dataFlow 2s linear infinite;
+    }
+
+    .animate-spin-slow {
+      animation: spinSlow 20s linear infinite;
+    }
+
+    .animate-neuron-pulse {
+      animation: neuronPulse 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo gradient-text">Rou'a AL Tamimi</a>
+      
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+        <svg id="menu-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="mobile-menu glass">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#achievements" onclick="closeMenu()">Achievements</a>
+      <a href="#certificates" onclick="closeMenu()">Certificates</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <!-- Neural Network Animation -->
+      <div class="neural-network">
+        <svg viewBox="0 0 400 300">
+          <!-- Gradient definitions -->
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="hsl(0, 84%, 67%)" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="hsl(350, 80%, 70%)" stop-opacity="0.6"/>
+            </linearGradient>
+            <radialGradient id="nodeGradient">
+              <stop offset="0%" stop-color="hsl(0, 84%, 75%)"/>
+              <stop offset="100%" stop-color="hsl(0, 84%, 60%)"/>
+            </radialGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          
+          <!-- Connections Layer 1 to 2 -->
+          <line x1="50" y1="80" x2="150" y2="60" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="80" x2="150" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="80" x2="150" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="80" x2="150" y2="240" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="150" x2="150" y2="60" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="150" x2="150" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="150" x2="150" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="150" x2="150" y2="240" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="220" x2="150" y2="60" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="220" x2="150" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="220" x2="150" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="50" y1="220" x2="150" y2="240" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          
+          <!-- Connections Layer 2 to 3 -->
+          <line x1="150" y1="60" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="60" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="60" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="120" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="120" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="120" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="180" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="180" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="180" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="240" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="240" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="150" y1="240" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          
+          <!-- Connections Layer 3 to 4 -->
+          <line x1="250" y1="80" x2="350" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="250" y1="80" x2="350" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="250" y1="150" x2="350" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="250" y1="150" x2="350" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="250" y1="220" x2="350" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          <line x1="250" y1="220" x2="350" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
+          
+          <!-- Animated data flow lines -->
+          <line x1="50" y1="80" x2="150" y2="60" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0s"/>
+          <line x1="50" y1="80" x2="150" y2="120" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0.3s"/>
+          <line x1="50" y1="150" x2="150" y2="180" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0.6s"/>
+          <line x1="150" y1="120" x2="250" y2="150" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0.9s"/>
+          <line x1="250" y1="150" x2="350" y2="120" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 1.2s"/>
+          
+          <!-- Central spinning circle -->
+          <circle cx="200" cy="150" r="60" fill="none" stroke="hsl(0, 84%, 67%, 0.1)" stroke-width="2" stroke-dasharray="10 5" class="animate-spin-slow" style="transform-origin: 200px 150px"/>
+          
+          <!-- Input Layer Nodes -->
+          <circle cx="50" cy="80" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="50" cy="80" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="48" cy="78" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="50" cy="150" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="50" cy="150" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="48" cy="148" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="50" cy="220" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="50" cy="220" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="48" cy="218" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <!-- Hidden Layer 1 Nodes -->
+          <circle cx="150" cy="60" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="150" cy="60" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="148" cy="58" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="150" cy="120" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="150" cy="120" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="148" cy="118" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="150" cy="180" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="150" cy="180" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="148" cy="178" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="150" cy="240" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="150" cy="240" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="148" cy="238" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <!-- Hidden Layer 2 Nodes -->
+          <circle cx="250" cy="80" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="250" cy="80" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="248" cy="78" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="250" cy="150" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="250" cy="150" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="248" cy="148" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="250" cy="220" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="250" cy="220" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="248" cy="218" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <!-- Output Layer Nodes -->
+          <circle cx="350" cy="120" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="350" cy="120" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="348" cy="118" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+          
+          <circle cx="350" cy="180" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
+          <circle cx="350" cy="180" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
+          <circle cx="348" cy="178" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
+        </svg>
+        
+        <!-- Floating particles -->
+        <div class="floating-particles">
+          <div class="particle" style="left: 20%; top: 30%; animation-delay: 0s"></div>
+          <div class="particle" style="left: 35%; top: 50%; animation-delay: 0.5s"></div>
+          <div class="particle" style="left: 50%; top: 30%; animation-delay: 1s"></div>
+          <div class="particle" style="left: 65%; top: 50%; animation-delay: 1.5s"></div>
+          <div class="particle" style="left: 80%; top: 30%; animation-delay: 2s"></div>
+          <div class="particle" style="left: 95%; top: 50%; animation-delay: 2.5s"></div>
+        </div>
+      </div>
+      
+      <h1>
+        <span class="gradient-text">AI & Machine Learning</span>
+        <br>
+        <span>Engineer</span>
+      </h1>
+      
+      <p>Passionate about building AI systems, creating real impact using AI & Machine Learning.</p>
+      
+      <a href="https://drive.google.com/file/d/YOUR_RESUME_ID/view" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        View My Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-card glass card-hover">
+        <p>
+          I am <span style="color: var(--foreground); font-weight: 600;">Rou'a AL Tamimi</span>, 
+          <span class="gradient-text" style="font-weight: 600;"> AI & Machine Learning Engineer</span> with 
+          1+ years of hands-on experience in machine learning and RAG systems. Proven track record 
+          of improving system performance by <span style="color: var(--primary); font-weight: 600;">40%</span> and 
+          delivering production-ready AI solutions. Seeking to leverage expertise in Python, 
+          machine learning, and scalable AI systems to drive innovation in technology companies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="bg-muted">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card glass card-hover">
+          <div class="achievement-icon">🔬</div>
+          <div>
+            <h3>Published Research at CERN</h3>
+            <p>Published research in the official CERN Repository during summer internship, contributing to advanced data-analysis methodologies and scientific computing workflows.</p>
+          </div>
+        </div>
+        <div class="achievement-card glass card-hover">
+          <div class="achievement-icon">🌟</div>
+          <div>
+            <h3>Open Source Contributor</h3>
+            <p>Contributed to high-impact open-source projects, improving performance, usability, and documentation for tools used in data science and machine-learning communities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <div class="container">
+      <h2 class="section-title">Certificates</h2>
+      <div class="certificates-grid">
+        <div class="certificate-card glass card-hover">
+          <div class="certificate-info">
+            <div class="certificate-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <h3>Machine Learning Engineering</h3>
+          </div>
+          <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="link-primary">
+            View Certificate
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+        <div class="certificate-card glass card-hover">
+          <div class="certificate-info">
+            <div class="certificate-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <h3>CERN Summer Internship</h3>
+          </div>
+          <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="link-primary">
+            View Certificate
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+        <div class="certificate-card glass card-hover">
+          <div class="certificate-info">
+            <div class="certificate-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <h3>Artificial Intelligence A-Z: Build 7 AI + LLM & ChatGPT</h3>
+          </div>
+          <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="link-primary">
+            View Certificate
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-muted">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card glass card-hover">
+          <h3>Programming</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">SQL</span>
+          </div>
+        </div>
+        <div class="skill-card glass card-hover">
+          <h3>Machine Learning</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Scikit-learn</span>
+            <span class="skill-badge">TensorFlow</span>
+            <span class="skill-badge">PyTorch</span>
+            <span class="skill-badge">LangChain</span>
+            <span class="skill-badge">HuggingFace</span>
+            <span class="skill-badge">GANS</span>
+            <span class="skill-badge">RAG</span>
+          </div>
+        </div>
+        <div class="skill-card glass card-hover">
+          <h3>Computer Vision & NLP</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">OpenCV</span>
+            <span class="skill-badge">YOLO</span>
+            <span class="skill-badge">NLTK</span>
+            <span class="skill-badge">Spacy</span>
+          </div>
+        </div>
+        <div class="skill-card glass card-hover">
+          <h3>MLOps & Cloud</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">MLFlow</span>
+            <span class="skill-badge">MLOPS</span>
+            <span class="skill-badge">AzureML</span>
+            <span class="skill-badge">Spark</span>
+          </div>
+        </div>
+        <div class="skill-card glass card-hover">
+          <h3>Development & Deployment</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">FastAPI</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">Kubernetes</span>
+            <span class="skill-badge">Streamlit</span>
+          </div>
+        </div>
+        <div class="skill-card glass card-hover">
+          <h3>Data & Visualization</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Pandas</span>
+            <span class="skill-badge">NumPy</span>
+            <span class="skill-badge">Matplotlib</span>
+            <span class="skill-badge">Plotly-express</span>
+            <span class="skill-badge">PandasProfiling</span>
+            <span class="skill-badge">PowerBI</span>
+            <span class="skill-badge">Tableau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">GitHub & Projects</h2>
+      <div class="projects-content">
+        <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          My GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-muted">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <p>I'm open to collaborations, freelance projects, and AI/ML roles.</p>
+        <div class="social-icons">
+          <a href="mailto:roaata9@gmail.com" class="social-icon" title="Email">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/roaa-tamimi/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>©️ 2024 Rou'a AL Tamimi. Built with passion for AI.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+
+    function closeMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.remove('open');
+    }
+  </script>
+</body>
+</html>
