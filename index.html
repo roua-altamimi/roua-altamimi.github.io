@@ -4,1088 +4,1058 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rou'a AL Tamimi | AI & Machine Learning Engineer</title>
-  <meta name="description" content="AI & Machine Learning Engineer with expertise in Python, TensorFlow, PyTorch, and production-ready AI solutions. Passionate about building intelligent systems that create real impact." />
-  <meta name="author" content="Rou'a AL Tamimi" />
-  <meta name="keywords" content="AI Engineer, Machine Learning, Python, TensorFlow, PyTorch, Data Science, RAG Systems, Computer Vision, NLP" />
-  
-  <meta property="og:title" content="Rou'a AL Tamimi | AI & Machine Learning Engineer" />
-  <meta property="og:description" content="AI & Machine Learning Engineer with expertise in Python, TensorFlow, PyTorch, and production-ready AI solutions." />
-  <meta property="og:type" content="website" />
-  
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rou'a AL Tamimi | AI & Machine Learning Engineer" />
-  <meta name="twitter:description" content="AI & Machine Learning Engineer with expertise in Python, TensorFlow, PyTorch, and production-ready AI solutions." />
-  
-  <link rel="canonical" href="https://roaatamimi.github.io" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <meta name="description" content="AI & Machine Learning Engineer passionate about building AI systems, creating real impact using AI & Machine Learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cedarville+Cursive&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --background: hsl(0, 60%, 97%);
-      --foreground: hsl(0, 0%, 12%);
-      --card: hsl(0, 40%, 99%);
-      --card-foreground: hsl(0, 0%, 12%);
-      --primary: hsl(0, 84%, 67%);
-      --primary-foreground: hsl(0, 0%, 100%);
-      --secondary: hsl(350, 80%, 95%);
-      --secondary-foreground: hsl(0, 60%, 45%);
-      --muted: hsl(30, 25%, 94%);
-      --muted-foreground: hsl(0, 0%, 45%);
-      --accent: hsl(15, 90%, 65%);
-      --accent-foreground: hsl(0, 0%, 100%);
-      --border: hsl(30, 20%, 90%);
-      --radius: 1rem;
-      --gradient-primary: linear-gradient(135deg, hsl(0, 84%, 67%), hsl(350, 80%, 60%));
-      --gradient-hero: linear-gradient(180deg, hsl(0, 60%, 97%) 0%, hsl(0, 70%, 95%) 50%, hsl(0, 60%, 97%) 100%);
-      --gradient-glow: radial-gradient(circle, hsl(0, 84%, 67%, 0.2) 0%, transparent 70%);
-      --shadow-soft: 0 4px 20px -4px hsl(0, 84%, 67%, 0.15);
-      --shadow-card: 0 8px 30px -8px hsl(0, 0%, 0%, 0.08);
-      --shadow-glow: 0 0 60px hsl(0, 84%, 67%, 0.2);
-      --font-display: 'Outfit', sans-serif;
-      --font-body: 'Space Grotesk', sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      background-color: var(--background);
-      color: var(--foreground);
-      font-family: var(--font-body);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', sans-serif;
+      background: #030014;
+      color: #e5e7eb;
+      overflow-x: hidden;
+      line-height: 1.5;
     }
+    a { text-decoration: none; color: inherit; }
+    ul, li { list-style: none; }
+    img { max-width: 100%; display: block; }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-display);
-    }
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #666; }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Glass Effect */
-    .glass {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    /* Gradient Text */
-    .gradient-text {
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Section Title */
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    @media (min-width: 768px) {
-      .section-title {
-        font-size: 2.5rem;
-      }
-    }
-
-    /* Card Hover */
-    .card-hover {
-      transition: all 0.5s ease-out;
-    }
-
-    .card-hover:hover {
-      box-shadow: var(--shadow-card);
-      transform: translateY(-4px);
-    }
-
-    /* Button Primary */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1rem 2rem;
-      border-radius: 0.75rem;
-      font-weight: 600;
-      color: var(--primary-foreground);
-      background: var(--gradient-primary);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .btn-primary:hover {
-      transform: scale(1.05);
-      box-shadow: var(--shadow-glow);
-    }
-
-    /* Skill Badge */
-    .skill-badge {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      background: var(--secondary);
-      color: var(--secondary-foreground);
-      transition: all 0.3s;
-    }
-
-    .skill-badge:hover {
-      background: var(--primary);
-      color: var(--primary-foreground);
-      transform: scale(1.05);
-    }
-
-    /* Social Icon */
-    .social-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--secondary);
-      color: var(--secondary-foreground);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .social-icon:hover {
-      background: var(--primary);
-      color: var(--primary-foreground);
-      transform: scale(1.1);
-      box-shadow: var(--shadow-soft);
-    }
-
-    /* Link Primary */
-    .link-primary {
-      color: var(--primary);
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .link-primary:hover {
-      gap: 0.75rem;
-    }
-
-    /* Navigation */
-    nav {
+    /* ===== STAR CANVAS ===== */
+    #star-canvas {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 50;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ===== ANIMATION CLASSES ===== */
+    .anim-slide-left, .anim-slide-right, .anim-slide-top, .anim-slide-bottom, .anim-fade, .anim-scale {
+      opacity: 0;
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .anim-slide-left { transform: translateX(-80px); }
+    .anim-slide-right { transform: translateX(80px); }
+    .anim-slide-top { transform: translateY(-60px); }
+    .anim-slide-bottom { transform: translateY(60px); }
+    .anim-fade { transform: none; }
+    .anim-scale { transform: scale(0.85); }
+
+    .anim-slide-left.visible, .anim-slide-right.visible, .anim-slide-top.visible,
+    .anim-slide-bottom.visible, .anim-fade.visible, .anim-scale.visible {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1);
+    }
+
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+    .delay-400 { transition-delay: 0.4s; }
+    .delay-500 { transition-delay: 0.5s; }
+    .delay-600 { transition-delay: 0.6s; }
+    .delay-700 { transition-delay: 0.7s; }
+    .delay-800 { transition-delay: 0.8s; }
+    .delay-900 { transition-delay: 0.9s; }
+    .delay-1000 { transition-delay: 1s; }
+
+    /* ===== CURSIVE ===== */
+    .cursive { font-family: 'Cedarville Cursive', cursive; }
+
+    /* ===== GRADIENT TEXT ===== */
+    .gradient-text {
+      background: linear-gradient(135deg, #a855f7, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-warm {
+      background: linear-gradient(135deg, #f472b6, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ===== GLASS EFFECTS ===== */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(112, 66, 248, 0.25);
+      border-radius: 16px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .glass-card:hover {
+      border-color: rgba(168, 85, 247, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(168, 85, 247, 0.12);
+    }
+
+    /* ===== WELCOME BOX ===== */
+    .Welcome-text {
+      background: linear-gradient(0deg, rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+                  linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+      background-blend-mode: normal, screen;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .Welcome-box {
+      display: inline-flex;
+      align-items: center;
+      backdrop-filter: blur(6px);
+      border-radius: 32px;
+      box-shadow: inset 0 -7px 11px rgba(164,143,255,0.12);
+      border: 1px solid rgba(112,66,248,0.55);
+      padding: 8px 16px;
+      opacity: 0.9;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(6,182,212,0.2));
+      border: 1px solid rgba(168,85,247,0.4);
+      padding: 12px 28px;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       transition: all 0.3s;
-      padding: 1.25rem 0;
+      font-family: inherit;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, rgba(168,85,247,0.35), rgba(6,182,212,0.35));
+      border-color: rgba(168,85,247,0.7);
+      box-shadow: 0 0 24px rgba(168,85,247,0.2);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(168,85,247,0.35);
+      padding: 10px 24px;
+      border-radius: 12px;
+      color: #c4b5fd;
+      font-weight: 500;
+      font-size: 0.875rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+    .btn-secondary:hover {
+      background: rgba(168,85,247,0.1);
+      border-color: rgba(168,85,247,0.6);
     }
 
-    nav.scrolled {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      box-shadow: var(--shadow-card);
-      padding: 0.75rem 0;
+    /* ===== ICON STYLES ===== */
+    .icon {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .icon-sm { width: 16px; height: 16px; }
+    .icon-lg { width: 24px; height: 24px; }
+    .icon-xl { width: 32px; height: 32px; }
+    .icon-feature {
+      width: 40px;
+      height: 40px;
+      stroke: #a855f7;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .nav-container {
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 32px);
+      max-width: 1200px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0 24px;
+      background: rgba(3, 0, 20, 0.6);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(112, 66, 248, 0.2);
+      border-radius: 16px;
+      z-index: 50;
     }
-
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: none;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .nav-links {
-        display: flex;
-      }
-    }
-
-    .nav-link {
-      color: var(--muted-foreground);
-      font-weight: 500;
-      text-decoration: none;
-      position: relative;
-      transition: color 0.3s;
-    }
-
-    .nav-link:hover {
-      color: var(--primary);
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 9999px;
-      transition: width 0.3s;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    .mobile-menu-btn {
-      display: block;
-      padding: 0.5rem;
-      background: none;
-      border: none;
-      color: var(--foreground);
-      cursor: pointer;
-    }
-
-    @media (min-width: 768px) {
-      .mobile-menu-btn {
-        display: none;
-      }
-    }
-
-    .mobile-menu {
-      display: none;
-      margin-top: 0.5rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      border-radius: 0.75rem;
-      padding: 1rem;
-    }
-
-    .mobile-menu.open {
-      display: block;
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 0.75rem 0;
-      color: var(--muted-foreground);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .mobile-menu a:hover {
-      color: var(--primary);
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
+    .navbar-brand {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #e5e7eb;
+    }
+    .navbar-brand .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #a855f7, #06b6d4);
+      border-radius: 8px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding-top: 5rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--gradient-hero);
+    }
+    .navbar-brand .brand-icon svg { stroke: #fff; }
+    .navbar-links {
+      display: none;
+      gap: 4px;
+    }
+    .navbar-links a {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      color: #9ca3af;
+      transition: color 0.3s, background 0.3s;
+    }
+    .navbar-links a:hover {
+      color: #e5e7eb;
+      background: rgba(168, 85, 247, 0.1);
+    }
+    .navbar-socials {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .navbar-socials a {
+      color: #9ca3af;
+      transition: color 0.3s;
+      display: flex;
+    }
+    .navbar-socials a:hover { color: #a855f7; }
+
+    @media (min-width: 768px) {
+      .navbar-links { display: flex; }
     }
 
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: auto; //100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px 25px; /* reduced bottom padding */
+      overflow: hidden;
+    }
     .hero::before {
       content: '';
       position: absolute;
-      top: 50%;
+      top: -200px;
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
-      background: var(--gradient-glow);
-      border-radius: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
+    .hero-inner {
+      max-width: 800px;
+      text-align: center;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* reduced from 24px */
+    }
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(112, 66, 248, 0.4);
+      background: rgba(112, 66, 248, 0.08);
+      font-size: 0.8rem;
+      color: #c4b5fd;
+    }
+    .hero-tag svg { width: 14px; height: 14px; stroke: #c4b5fd; stroke-width: 2; fill: none; }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      text-wrap: balance;
+    }
+    @media (min-width: 768px) { .hero-title { font-size: 3.5rem; } }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #9ca3af;
+      max-width: 600px;
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 4px; /* reduced from 8px */
+    }
 
-    .hero-content {
+    /* ===== SECTION COMMON ===== */
+    .section {
       position: relative;
       z-index: 10;
+      padding: 25px 24px; /* reduced from 100px */
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-header {
       text-align: center;
+      margin-bottom: 32px; /* reduced from 56px */
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
+    .section-title {
+      font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
-      animation: fadeInUp 0.8s ease-out 0.2s both;
+      color: #fff;
+      margin-bottom: 12px;
+      text-wrap: balance;
     }
-
-    @media (min-width: 768px) {
-      .hero h1 {
-        font-size: 4rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .hero h1 {
-        font-size: 5rem;
-      }
-    }
-
-    .hero p {
-      font-size: 1.125rem;
-      color: var(--muted-foreground);
-      max-width: 42rem;
-      margin: 0 auto 2.5rem;
-      animation: fadeInUp 0.8s ease-out 0.3s both;
-    }
-
-    @media (min-width: 768px) {
-      .hero p {
-        font-size: 1.25rem;
-      }
-    }
-
-    .hero .btn-primary {
-      animation: fadeInUp 0.8s ease-out 0.4s both;
-    }
-
-    /* Neural Network */
-    .neural-network {
-      position: relative;
-      width: 400px;
-      height: 300px;
-      margin: 0 auto 2rem;
-      animation: fadeInUp 0.8s ease-out both;
-    }
-
-    .neural-network svg {
-      width: 100%;
-      height: 100%;
-      filter: drop-shadow(0 0 20px hsl(0, 84%, 67%, 0.3));
-    }
-
-    .floating-particles {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    .particle {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: hsl(0, 84%, 67%, 0.4);
-      animation: float 6s ease-in-out infinite;
-    }
-
-    /* Sections */
-    section {
-      padding: 6rem 0;
-    }
-
-    .bg-muted {
-      background: hsl(30, 25%, 94%, 0.3);
-    }
-
-    /* About */
-    .about-card {
-      max-width: 56rem;
+    @media (min-width: 768px) { .section-title { font-size: 2.5rem; } }
+    .section-desc {
+      font-size: 1rem;
+      color: #9ca3af;
+      max-width: 600px;
       margin: 0 auto;
-      padding: 2rem;
-      border-radius: 1rem;
-    }
-
-    @media (min-width: 768px) {
-      .about-card {
-        padding: 3rem;
-      }
-    }
-
-    .about-card p {
-      font-size: 1.125rem;
-      color: var(--muted-foreground);
-      line-height: 1.8;
-    }
-
-    @media (min-width: 768px) {
-      .about-card p {
-        font-size: 1.25rem;
-      }
-    }
-
-    /* Achievements */
-    .achievements-grid {
-      max-width: 56rem;
-      margin: 0 auto;
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .achievement-card {
-      padding: 2rem;
-      border-radius: 1rem;
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-    }
-
-    .achievement-icon {
-      font-size: 2.5rem;
-    }
-
-    .achievement-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--foreground);
-      margin-bottom: 0.75rem;
-    }
-
-    .achievement-card p {
-      color: var(--muted-foreground);
       line-height: 1.6;
     }
 
-    /* Certificates */
-    .certificates-grid {
-      max-width: 56rem;
-      margin: 0 auto;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .certificate-card {
-      padding: 1.5rem;
-      border-radius: 0.75rem;
+    /* ===== ABOUT ===== */
+    .about-content {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
+      gap: 20px; /* reduced from 32px */
     }
-
-    .certificate-info {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .certificate-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.75rem;
-      background: var(--secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .certificate-icon svg {
-      width: 1.5rem;
-      height: 1.5rem;
-      color: var(--primary);
-    }
-
-    .certificate-card h3 {
-      font-weight: 600;
-      color: var(--foreground);
-    }
-
-    /* Skills */
-    .skills-grid {
-      max-width: 64rem;
-      margin: 0 auto;
-      display: grid;
-      gap: 1.5rem;
-    }
-
     @media (min-width: 768px) {
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .about-content {
+        flex-direction: row;
+        gap: 40px; /* reduced from 48px */
+        align-items: flex-start;
       }
     }
-
-    @media (min-width: 1024px) {
-      .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .about-icon-wrapper {
+      flex-shrink: 0;
+      width: 100px; /* reduced from 120px */
+      height: 100px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(6,182,212,0.15));
+      border: 1px solid rgba(168,85,247,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-icon-wrapper svg {
+      width: 48px; /* reduced from 56px */
+      height: 48px;
+      stroke: #a855f7;
+      stroke-width: 1.5;
+      fill: none;
+    }
+    .about-text {
+      font-size: 1.05rem;
+      color: #d1d5db;
+      line-height: 1.7;
+      text-align: left;
+    }
+    .about-text strong {
+      color: #fff;
     }
 
+    /* ===== ACHIEVEMENTS ===== */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px; /* reduced from 24px */
+    }
+    @media (min-width: 768px) {
+      .achievements-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .achievement-card {
+      padding: 24px; /* reduced from 32px */
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* reduced from 16px */
+    }
+    .achievement-icon {
+      width: 48px; /* reduced from 56px */
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(6,182,212,0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .achievement-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #a855f7;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .achievement-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .achievement-card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    /* ===== CERTIFICATES ===== */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px; /* reduced from 20px */
+    }
+    @media (min-width: 640px) { .certs-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .certs-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .cert-card {
+      padding: 22px; /* reduced from 28px */
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* reduced from 16px */
+    }
+    .cert-icon {
+      width: 44px; /* reduced from 48px */
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(6,182,212,0.12));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #06b6d4;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .cert-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      line-height: 1.4;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px; /* reduced from 20px */
+    }
+    @media (min-width: 640px) { .skills-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1024px) { .skills-grid { grid-template-columns: 1fr 1fr 1fr; } }
     .skill-card {
-      padding: 1.5rem;
-      border-radius: 1rem;
+      padding: 22px; /* reduced from 28px */
     }
-
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px; /* reduced from 20px */
+    }
+    .skill-card-icon {
+      width: 36px; /* reduced from 40px */
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(6,182,212,0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .skill-card-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: #a855f7;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
     .skill-card h3 {
-      font-weight: 700;
-      color: var(--foreground);
-      margin-bottom: 1rem;
-      font-size: 1.125rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
     }
-
-    .skill-badges {
+    .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 6px; /* reduced from 8px */
+    }
+    .skill-tag {
+      padding: 5px 12px; /* slightly reduced */
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #c4b5fd;
+      background: rgba(168, 85, 247, 0.08);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      transition: all 0.3s;
+    }
+    .skill-tag:hover {
+      background: rgba(168, 85, 247, 0.15);
+      border-color: rgba(168, 85, 247, 0.4);
+      color: #e5e7eb;
     }
 
-    /* Projects */
-    .projects-content {
+    /* ===== GITHUB & PROJECTS ===== */
+    .github-section {
       text-align: center;
     }
+    .github-card {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 32px 28px; /* reduced from 48px 32px */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px; /* reduced from 20px */
+    }
+    .github-icon {
+      width: 56px; /* reduced from 64px */
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(6,182,212,0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .github-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: #e5e7eb;
+      stroke: none;
+    }
+    .github-card p {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
-    /* Contact */
-    .contact-content {
-      max-width: 42rem;
+    /* ===== CONTACT ===== */
+    .contact-inner {
+      max-width: 600px;
       margin: 0 auto;
       text-align: center;
     }
-
-    .contact-content p {
-      font-size: 1.125rem;
-      color: var(--muted-foreground);
-      margin-bottom: 2.5rem;
-    }
-
-    .social-icons {
+    .contact-card {
+      padding: 32px 28px; /* reduced from 48px 32px */
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px; /* reduced from 24px */
+    }
+    .contact-icon {
+      width: 56px; /* reduced from 64px */
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(6,182,212,0.15));
+      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 1.5rem;
+    }
+    .contact-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: #a855f7;
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .contact-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .contact-card p {
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+    .contact-links {
+      display: flex;
+      gap: 12px; /* reduced from 16px */
       flex-wrap: wrap;
+      justify-content: center;
     }
 
-    /* Footer */
-    footer {
-      padding: 2rem 0;
-      background: var(--background);
-      border-top: 1px solid var(--border);
+    /* ===== FOOTER ===== */
+    .footer {
+      position: relative;
+      z-index: 10;
       text-align: center;
+      padding: 24px; /* reduced from 32px */
+      border-top: 1px solid rgba(112, 66, 248, 0.15);
+      color: #6b7280;
+      font-size: 0.85rem;
     }
 
-    footer p {
-      color: var(--muted-foreground);
+    /* ===== DIVIDER ===== */
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #a855f7, #06b6d4);
+      border-radius: 4px;
+      margin: 12px auto 0; /* reduced from 16px */
     }
 
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* ===== FLOATING PARTICLES ===== */
+    .floating-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float-orb 8s ease-in-out infinite;
     }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(5deg);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 0.4;
-      }
-      50% {
-        opacity: 0.8;
-      }
-    }
-
-    @keyframes dataFlow {
-      0% {
-        stroke-dashoffset: 30;
-        opacity: 0;
-      }
-      20% {
-        opacity: 0.8;
-      }
-      100% {
-        stroke-dashoffset: -30;
-        opacity: 0;
-      }
-    }
-
-    @keyframes spinSlow {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes neuronPulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-    }
-
-    .animate-pulse {
-      animation: pulse 3s ease-in-out infinite;
-    }
-
-    .animate-data-flow {
-      animation: dataFlow 2s linear infinite;
-    }
-
-    .animate-spin-slow {
-      animation: spinSlow 20s linear infinite;
-    }
-
-    .animate-neuron-pulse {
-      animation: neuronPulse 2s ease-in-out infinite;
+    @keyframes float-orb {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="container nav-container">
-      <a href="#" class="nav-logo gradient-text">Rou'a AL Tamimi</a>
-      
-      <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#certificates" class="nav-link">Certificates</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      
-      <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
-        <svg id="menu-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-    
-    <div id="mobile-menu" class="mobile-menu glass">
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#achievements" onclick="closeMenu()">Achievements</a>
-      <a href="#certificates" onclick="closeMenu()">Certificates</a>
-      <a href="#skills" onclick="closeMenu()">Skills</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <!-- Neural Network Animation -->
-      <div class="neural-network">
-        <svg viewBox="0 0 400 300">
-          <!-- Gradient definitions -->
-          <defs>
-            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="hsl(0, 84%, 67%)" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="hsl(350, 80%, 70%)" stop-opacity="0.6"/>
-            </linearGradient>
-            <radialGradient id="nodeGradient">
-              <stop offset="0%" stop-color="hsl(0, 84%, 75%)"/>
-              <stop offset="100%" stop-color="hsl(0, 84%, 60%)"/>
-            </radialGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          
-          <!-- Connections Layer 1 to 2 -->
-          <line x1="50" y1="80" x2="150" y2="60" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="80" x2="150" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="80" x2="150" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="80" x2="150" y2="240" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="150" x2="150" y2="60" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="150" x2="150" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="150" x2="150" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="150" x2="150" y2="240" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="220" x2="150" y2="60" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="220" x2="150" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="220" x2="150" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="50" y1="220" x2="150" y2="240" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          
-          <!-- Connections Layer 2 to 3 -->
-          <line x1="150" y1="60" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="60" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="60" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="120" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="120" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="120" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="180" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="180" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="180" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="240" x2="250" y2="80" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="240" x2="250" y2="150" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="150" y1="240" x2="250" y2="220" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          
-          <!-- Connections Layer 3 to 4 -->
-          <line x1="250" y1="80" x2="350" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="250" y1="80" x2="350" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="250" y1="150" x2="350" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="250" y1="150" x2="350" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="250" y1="220" x2="350" y2="120" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          <line x1="250" y1="220" x2="350" y2="180" stroke="url(#lineGradient)" stroke-width="1.5" opacity="0.4" class="animate-pulse"/>
-          
-          <!-- Animated data flow lines -->
-          <line x1="50" y1="80" x2="150" y2="60" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0s"/>
-          <line x1="50" y1="80" x2="150" y2="120" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0.3s"/>
-          <line x1="50" y1="150" x2="150" y2="180" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0.6s"/>
-          <line x1="150" y1="120" x2="250" y2="150" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 0.9s"/>
-          <line x1="250" y1="150" x2="350" y2="120" stroke="hsl(0, 84%, 67%)" stroke-width="2" stroke-dasharray="5 10" opacity="0.8" class="animate-data-flow" style="animation-delay: 1.2s"/>
-          
-          <!-- Central spinning circle -->
-          <circle cx="200" cy="150" r="60" fill="none" stroke="hsl(0, 84%, 67%, 0.1)" stroke-width="2" stroke-dasharray="10 5" class="animate-spin-slow" style="transform-origin: 200px 150px"/>
-          
-          <!-- Input Layer Nodes -->
-          <circle cx="50" cy="80" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="50" cy="80" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="48" cy="78" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="50" cy="150" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="50" cy="150" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="48" cy="148" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="50" cy="220" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="50" cy="220" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="48" cy="218" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <!-- Hidden Layer 1 Nodes -->
-          <circle cx="150" cy="60" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="150" cy="60" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="148" cy="58" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="150" cy="120" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="150" cy="120" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="148" cy="118" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="150" cy="180" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="150" cy="180" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="148" cy="178" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="150" cy="240" r="14" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="150" cy="240" r="10" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="148" cy="238" r="4" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <!-- Hidden Layer 2 Nodes -->
-          <circle cx="250" cy="80" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="250" cy="80" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="248" cy="78" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="250" cy="150" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="250" cy="150" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="248" cy="148" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="250" cy="220" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="250" cy="220" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="248" cy="218" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <!-- Output Layer Nodes -->
-          <circle cx="350" cy="120" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="350" cy="120" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="348" cy="118" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-          
-          <circle cx="350" cy="180" r="12" fill="hsl(0, 84%, 67%, 0.2)" class="animate-pulse"/>
-          <circle cx="350" cy="180" r="8" fill="url(#nodeGradient)" filter="url(#glow)"/>
-          <circle cx="348" cy="178" r="3" fill="hsl(0, 100%, 90%)" opacity="0.6"/>
-        </svg>
-        
-        <!-- Floating particles -->
-        <div class="floating-particles">
-          <div class="particle" style="left: 20%; top: 30%; animation-delay: 0s"></div>
-          <div class="particle" style="left: 35%; top: 50%; animation-delay: 0.5s"></div>
-          <div class="particle" style="left: 50%; top: 30%; animation-delay: 1s"></div>
-          <div class="particle" style="left: 65%; top: 50%; animation-delay: 1.5s"></div>
-          <div class="particle" style="left: 80%; top: 30%; animation-delay: 2s"></div>
-          <div class="particle" style="left: 95%; top: 50%; animation-delay: 2.5s"></div>
-        </div>
-      </div>
-      
-      <h1>
-        <span class="gradient-text">AI & Machine Learning</span>
-        <br>
-        <span>Engineer</span>
-      </h1>
-      
-      <p>Passionate about building AI systems, creating real impact using AI & Machine Learning.</p>
-      
-      <a href="https://roua-altamimi.github.io/Lebenslauf/AltamimiRouaCV-New.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-        </svg>
-        View My Resume
+<!-- STAR BACKGROUND -->
+<canvas id="star-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#home" class="navbar-brand">
+    <div class="brand-icon">
+      <svg class="icon-sm" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    </div>
+    <span>Rou'a AL Tamimi</span>
+  </a>
+  <div class="navbar-links">
+    <a href="#about">About</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="navbar-socials">
+    <a href="https://github.com/roua-altamimi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/roua-altamimi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:roua.altamimi@email.com" aria-label="Email">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-tags anim-slide-top delay-200">
+      <span class="hero-tag">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        AI Engineer
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        Machine Learning
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        RAG Systems
+      </span>
+    </div>
+
+    <h1 class="hero-title anim-slide-bottom delay-400">
+      Building <span class="gradient-text">AI Systems</span> That Create <span class="gradient-text-warm">Real Impact</span>
+    </h1>
+
+    <p class="hero-subtitle anim-fade delay-600">
+      AI & Machine Learning Engineer with 1+ years of hands-on experience in machine learning and RAG systems. Proven track record of improving system performance by 40%.
+    </p>
+
+    <div class="hero-cta anim-fade delay-800">
+      <a href="#about" class="btn-primary">
+        <svg class="icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        Learn More
+      </a>
+      <a href="#contact" class="btn-secondary">
+        <svg class="icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+        Get In Touch
       </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-card glass card-hover">
-        <p>
-          I am <span style="color: var(--foreground); font-weight: 600;">Rou'a AL Tamimi</span>, 
-          <span class="gradient-text" style="font-weight: 600;"> AI & Machine Learning Engineer</span> with 
-          1+ years of hands-on experience in machine learning and RAG systems. Proven track record 
-          of improving system performance by <span style="color: var(--primary); font-weight: 600;">40%</span> and 
-          delivering production-ready AI solutions. Seeking to leverage expertise in Python, 
-          machine learning, and scalable AI systems to drive innovation in technology companies.
-        </p>
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="section-header anim-slide-top">
+    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="about-content">
+    <div class="about-icon-wrapper anim-slide-left delay-300">
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </div>
+    <div class="about-text anim-slide-right delay-400">
+      I am <strong>Rou'a AL Tamimi</strong>, an AI & Machine Learning Engineer with 1+ years of hands-on experience in machine learning and RAG systems. I have a proven track record of improving system performance by 40% and delivering production-ready AI solutions. I'm passionate about leveraging expertise in Python, machine learning, and scalable AI systems to drive innovation in technology companies.
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="section" id="achievements">
+  <div class="section-header anim-slide-top">
+    <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="achievements-grid">
+    <div class="achievement-card glass-card anim-slide-left delay-200">
+      <div class="achievement-icon">
+        <svg viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 100-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 01-2-2V6h6v4a2 2 0 01-2 2z"/><path d="M12 6V3a1 1 0 00-1-1H9a1 1 0 00-1 1v3"/></svg>
+      </div>
+      <h3>Published Research at CERN</h3>
+      <p>Published research in the official CERN Repository during summer internship, contributing to advanced data-analysis methodologies and scientific computing workflows.</p>
+    </div>
+
+    <div class="achievement-card glass-card anim-slide-right delay-300">
+      <div class="achievement-icon">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke-width="2" fill="none"/></svg>
+      </div>
+      <h3>Open Source Contributor</h3>
+      <p>Contributed to high-impact open-source projects, improving performance, usability, and documentation for tools used in data science and machine-learning communities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATES ===== -->
+<section class="section" id="certificates">
+  <div class="section-header anim-slide-top">
+    <h2 class="section-title"><span class="gradient-text">Certificates</span></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="certs-grid">
+    <div class="cert-card glass-card anim-scale delay-200">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      </div>
+      <h3>Machine Learning Specialization</h3>
+      <a href="#" class="btn-secondary" style="margin-top: auto;">
+        <svg class="icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View Certificate
+      </a>
+    </div>
+
+    <div class="cert-card glass-card anim-scale delay-400">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      </div>
+      <h3>CERN Summer Internship</h3>
+      <a href="#" class="btn-secondary" style="margin-top: auto;">
+        <svg class="icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View Certificate
+      </a>
+    </div>
+
+    <div class="cert-card glass-card anim-scale delay-600">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      </div>
+      <h3>Artificial Intelligence A-Z: Build 7 AI + LLM & ChatGPT</h3>
+      <a href="#" class="btn-secondary" style="margin-top: auto;">
+        <svg class="icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View Certificate
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="section-header anim-slide-top">
+    <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+    <p class="section-desc cursive" style="font-size: 1.15rem; margin-top: 8px;">Tools and technologies I work with daily</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card glass-card anim-slide-bottom delay-100">
+      <div class="skill-card-header">
+        <div class="skill-card-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3>Programming</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">SQL</span>
       </div>
     </div>
-  </section>
 
-  <!-- Achievements Section -->
-  <section id="achievements" class="bg-muted">
-    <div class="container">
-      <h2 class="section-title">Achievements</h2>
-      <div class="achievements-grid">
-        <div class="achievement-card glass card-hover">
-          <div class="achievement-icon">🔬</div>
-          <div>
-            <h3>Published Research at CERN</h3>
-            <p>Published research in the official CERN Repository during summer internship, contributing to advanced data-analysis methodologies and scientific computing workflows.</p>
-          </div>
+    <div class="skill-card glass-card anim-slide-bottom delay-200">
+      <div class="skill-card-header">
+        <div class="skill-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8 6a4 4 0 00-4 4c0 1.95 1.4 3.58 3.25 3.93"/><path d="M16 10a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8 14a4 4 0 00-4 4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2a4 4 0 00-4-4"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
-        <div class="achievement-card glass card-hover">
-          <div class="achievement-icon">🌟</div>
-          <div>
-            <h3>Open Source Contributor</h3>
-            <p>Contributed to high-impact open-source projects, improving performance, usability, and documentation for tools used in data science and machine-learning communities.</p>
-          </div>
-        </div>
+        <h3>Machine Learning</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">HuggingFace</span>
+        <span class="skill-tag">GANs</span>
+        <span class="skill-tag">RAG</span>
       </div>
     </div>
-  </section>
 
-  <!-- Certificates Section -->
-  <section id="certificates">
-    <div class="container">
-      <h2 class="section-title">Certificates</h2>
-      <div class="certificates-grid">
-        <div class="certificate-card glass card-hover">
-          <div class="certificate-info">
-            <div class="certificate-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            </div>
-            <h3>Machine Learning Specialization</h3>
-          </div>
-          <a href="https://roua-altamimi.github.io/Lebenslauf/ZAKA.pdf" target="_blank" rel="noopener noreferrer" class="link-primary">
-            View Certificate
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </a>
+    <div class="skill-card glass-card anim-slide-bottom delay-300">
+      <div class="skill-card-header">
+        <div class="skill-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
-        <div class="certificate-card glass card-hover">
-          <div class="certificate-info">
-            <div class="certificate-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            </div>
-            <h3>CERN Summer Internship</h3>
-          </div>
-          <a href="https://cds.cern.ch/record/2799255" target="_blank" rel="noopener noreferrer" class="link-primary">
-            View Certificate
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </a>
-        </div>
-        <div class="certificate-card glass card-hover">
-          <div class="certificate-info">
-            <div class="certificate-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-              </svg>
-            </div>
-            <h3>Artificial Intelligence A-Z: Build 7 AI + LLM & ChatGPT</h3>
-          </div>
-          <a href="https://roua-altamimi.github.io/Lebenslauf/UdemyAI.pdf" target="_blank" rel="noopener noreferrer" class="link-primary">
-            View Certificate
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </a>
-        </div>
+        <h3>Computer Vision & NLP</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">OpenCV</span>
+        <span class="skill-tag">YOLO</span>
+        <span class="skill-tag">NLTK</span>
+        <span class="skill-tag">Spacy</span>
       </div>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="bg-muted">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card glass card-hover">
-          <h3>Programming</h3>
-          <div class="skill-badges">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">C++</span>
-            <span class="skill-badge">SQL</span>
-          </div>
+    <div class="skill-card glass-card anim-slide-bottom delay-400">
+      <div class="skill-card-header">
+        <div class="skill-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
         </div>
-        <div class="skill-card glass card-hover">
-          <h3>Machine Learning</h3>
-          <div class="skill-badges">
-            <span class="skill-badge">Scikit-learn</span>
-            <span class="skill-badge">TensorFlow</span>
-            <span class="skill-badge">PyTorch</span>
-            <span class="skill-badge">LangChain</span>
-            <span class="skill-badge">HuggingFace</span>
-            <span class="skill-badge">GANS</span>
-            <span class="skill-badge">RAG</span>
-          </div>
-        </div>
-        <div class="skill-card glass card-hover">
-          <h3>Computer Vision & NLP</h3>
-          <div class="skill-badges">
-            <span class="skill-badge">OpenCV</span>
-            <span class="skill-badge">YOLO</span>
-            <span class="skill-badge">NLTK</span>
-            <span class="skill-badge">Spacy</span>
-          </div>
-        </div>
-        <div class="skill-card glass card-hover">
-          <h3>MLOps & Cloud</h3>
-          <div class="skill-badges">
-            <span class="skill-badge">MLFlow</span>
-            <span class="skill-badge">MLOPS</span>
-            <span class="skill-badge">AzureML</span>
-            <span class="skill-badge">Spark</span>
-          </div>
-        </div>
-        <div class="skill-card glass card-hover">
-          <h3>Development & Deployment</h3>
-          <div class="skill-badges">
-            <span class="skill-badge">FastAPI</span>
-            <span class="skill-badge">Docker</span>
-            <span class="skill-badge">Kubernetes</span>
-            <span class="skill-badge">Streamlit</span>
-          </div>
-        </div>
-        <div class="skill-card glass card-hover">
-          <h3>Data & Visualization</h3>
-          <div class="skill-badges">
-            <span class="skill-badge">Pandas</span>
-            <span class="skill-badge">NumPy</span>
-            <span class="skill-badge">Matplotlib</span>
-            <span class="skill-badge">Plotly-express</span>
-            <span class="skill-badge">PandasProfiling</span>
-            <span class="skill-badge">PowerBI</span>
-            <span class="skill-badge">Tableau</span>
-          </div>
-        </div>
+        <h3>MLOps & Cloud</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">MLFlow</span>
+        <span class="skill-tag">MLOps</span>
+        <span class="skill-tag">AzureML</span>
+        <span class="skill-tag">Spark</span>
       </div>
     </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">GitHub & Projects</h2>
-      <div class="projects-content">
-        <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="btn-primary">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          My GitHub
+    <div class="skill-card glass-card anim-slide-bottom delay-500">
+      <div class="skill-card-header">
+        <div class="skill-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Development & Deployment</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">Streamlit</span>
+      </div>
+    </div>
+
+    <div class="skill-card glass-card anim-slide-bottom delay-600">
+      <div class="skill-card-header">
+        <div class="skill-card-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        </div>
+        <h3>Data & Visualization</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Plotly</span>
+        <span class="skill-tag">PowerBI</span>
+        <span class="skill-tag">Tableau</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GITHUB & PROJECTS ===== -->
+<section class="section github-section" id="projects">
+  <div class="section-header anim-slide-top">
+    <h2 class="section-title">GitHub & <span class="gradient-text">Projects</span></h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="github-card glass-card anim-scale delay-300">
+    <div class="github-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    </div>
+    <p>Explore my open-source projects, AI experiments, and contributions to the machine learning community.</p>
+    <a href="https://github.com/roua-altamimi" target="_blank" rel="noopener noreferrer" class="btn-primary">
+      <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      Visit My GitHub
+    </a>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="contact-inner">
+    <div class="section-header anim-slide-top">
+      <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="contact-card glass-card anim-scale delay-300">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      </div>
+      <h3>Let's Collaborate</h3>
+      <p>I'm open to collaborations, freelance projects, and AI/ML roles. Feel free to reach out through any of the channels below.</p>
+      <div class="contact-links">
+        <a href="https://github.com/roua-altamimi" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/roua-altamimi/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:roua.altamimi@email.com" class="btn-secondary">
+          <svg class="icon-sm" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          Email
         </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-muted">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-content">
-        <p>I'm open to collaborations, freelance projects, and AI/ML roles.</p>
-        <div class="social-icons">
-          <a href="mailto:roaata9@gmail.com" class="social-icon" title="Email">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/roaa-tamimi/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
-          <a href="https://github.com/roaatamimi" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Rou'a AL Tamimi &mdash; AI & Machine Learning Engineer</p>
+</footer>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>©️ 2024 Rou'a AL Tamimi. Built with passion for AI.</p>
-    </div>
-  </footer>
+<script>
+  // ===== INTERSECTION OBSERVER =====
+  (function() {
+    const els = document.querySelectorAll(
+      '.anim-slide-left, .anim-slide-right, .anim-slide-top, .anim-slide-bottom, .anim-fade, .anim-scale'
+    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => observer.observe(el));
+  })();
 
-  <script>
-    // Navigation scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
+  // ===== STAR BACKGROUND =====
+  (function() {
+    const canvas = document.getElementById('star-canvas');
+    const ctx = canvas.getContext('2d');
+    let w, h;
+    const COUNT = 900;
+    const stars = [];
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    for (let i = 0; i < COUNT; i++) {
+      stars.push({
+        x: Math.random() * 2 - 1,
+        y: Math.random() * 2 - 1,
+        z: Math.random(),
+        size: Math.random() * 1.5 + 0.4,
+        opacity: Math.random() * 0.7 + 0.3,
+        speed: Math.random() * 0.3 + 0.1,
+      });
+    }
+
+    let angle = 0;
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      angle += 0.00025;
+      const cos = Math.cos(angle);
+      const sin = Math.sin(angle);
+
+      for (let i = 0; i < COUNT; i++) {
+        const s = stars[i];
+        const rx = s.x * cos - s.y * sin;
+        const ry = s.x * sin + s.y * cos;
+        const sx = (rx + 1) * 0.5 * w;
+        const sy = (ry + 1) * 0.5 * h;
+        const twinkle = 0.5 + 0.5 * Math.sin(Date.now() * 0.001 * s.speed + i);
+        const alpha = s.opacity * twinkle;
+
+        ctx.beginPath();
+        ctx.arc(sx, sy, s.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+        ctx.fill();
       }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  // ===== NAVBAR SCROLL EFFECT =====
+  (function() {
+    const nav = document.querySelector('.navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const st = window.scrollY;
+      if (st > 100) {
+        nav.style.background = 'rgba(3, 0, 20, 0.85)';
+        nav.style.borderColor = 'rgba(112, 66, 248, 0.3)';
+      } else {
+        nav.style.background = 'rgba(3, 0, 20, 0.6)';
+        nav.style.borderColor = 'rgba(112, 66, 248, 0.2)';
+      }
+      lastScroll = st;
     });
+  })();
+</script>
 
-    // Mobile menu toggle
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('open');
-    }
-
-    function closeMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.remove('open');
-    }
-  </script>
 </body>
 </html>
